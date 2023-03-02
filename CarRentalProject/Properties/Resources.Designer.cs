@@ -63,6 +63,16 @@ namespace CarRentalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap astra {
+            get {
+                object obj = ResourceManager.GetObject("astra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap BMW {
             get {
                 object obj = ResourceManager.GetObject("BMW", resourceCulture);
@@ -86,6 +96,16 @@ namespace CarRentalProject.Properties {
         public static System.Drawing.Bitmap car {
             get {
                 object obj = ResourceManager.GetObject("car", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap check {
+            get {
+                object obj = ResourceManager.GetObject("check", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,16 @@ namespace CarRentalProject.Properties {
         public static System.Drawing.Bitmap MERCEDES {
             get {
                 object obj = ResourceManager.GetObject("MERCEDES", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap opel {
+            get {
+                object obj = ResourceManager.GetObject("opel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

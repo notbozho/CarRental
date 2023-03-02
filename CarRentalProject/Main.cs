@@ -39,7 +39,7 @@ namespace CarRentalProject {
                 carSelectionBtn.Enabled = false;
 
                 invalidTextBoxes.ForEach(textBox => Helper.bounceInvalid(textBox));
-                //return;
+                return;
             }
 
             tabControl.SelectedIndex = 1;
@@ -62,7 +62,17 @@ namespace CarRentalProject {
                 .With(carSelectionBtn, nameof(ParrotButton.BackgroundColor), Color.IndianRed)
                 .With(carSelectionBtn, nameof(Top), carSelectionBtn.Top + 25)
                 .HookOnCompletion(() => finalizeBtn.Enabled = true)
-                .Bounce(TimeSpan.FromMilliseconds(300));
+                .Bounce(TimeSpan.FromMilliseconds(350));
+
+                return;
+            }
+
+            if (selectedCar == null) {
+                finalizeBtn.Enabled = false;
+
+                Transition
+                    .With(iconComboBox1, nameof(Top), iconComboBox1.Top + 25)
+                    .Bounce(TimeSpan.FromMilliseconds(500));
 
                 return;
             }
@@ -132,27 +142,52 @@ namespace CarRentalProject {
 
             //center car label
             selectedCarLabel.Location = new Point((Width / 2) - selectedCarLabel.Width / 2 - 40, selectedCarLabel.Location.Y);
+
+            finalizeBtn.Enabled = true;
         }
 
         private void startDatePicker_ValueChanged(object sender, EventArgs e) {
             if (startDatePicker.Value < DateTime.Today) startDatePicker.Value = DateTime.Today;
-            else if(startDatePicker.Value > endDatePicker.Value) startDatePicker.Value = endDatePicker.Value;
 
             updateFinalLabel();
         }
 
         private void endDatePicker_ValueChanged(object sender, EventArgs e) {
             if (endDatePicker.Value < DateTime.Today) endDatePicker.Value = DateTime.Today;
-            else if (endDatePicker.Value < startDatePicker.Value) endDatePicker.Value = startDatePicker.Value;
 
             updateFinalLabel();
         }
 
         private void updateFinalLabel() {
-            int daysRented = (int) (endDatePicker.Value - startDatePicker.Value).TotalDays;
+            if (selectedCar == null) return;
+
+            int daysRented = (int) (endDatePicker.Value - startDatePicker.Value).TotalDays + 1;
+
+            if (daysRented < 0) {
+                endDatePicker.Value = startDatePicker.Value;
+                return;
+            }
+
             finalizeOrderLabel.Text = $"{selectedCar.Model}\n" +
                 $"{selectedCar.RatePerDay} BGN/day\n" +
-                $"Total: {selectedCar.RatePerDay * (daysRented + 1)} BGN";
+                $"{daysRented} Days\n------\n" +
+                $"Total: {(selectedCar.RatePerDay * (daysRented)).ToString("0.00")} BGN";
+
+            finalizeOrderLabel.Location = new Point((Width / 2) - finalizeOrderLabel.Width / 2 - 40, finalizeOrderLabel.Location.Y);
+        }
+
+        private void rentBtn_Click(object sender, EventArgs e) {
+            tabControl.SelectedIndex = 3;
+
+            thankYouLabel.Text = $"Thank you for using our\n Car Rental Services, {firstNameTextBox.Text} !";
+            thankYouLabel.Location = new Point((Width / 2) - thankYouLabel.Width / 2 - 40, thankYouLabel.Location.Y);
+
+            smsLabel.Location = new Point((Width / 2) - smsLabel.Width / 2 - 40, smsLabel.Location.Y);
+
+            personalInfoBtn.Hide();
+            carSelectionBtn.Hide();
+            finalizeBtn.Hide();
+
         }
     }
 }

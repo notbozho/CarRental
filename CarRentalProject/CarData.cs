@@ -16,6 +16,7 @@ namespace CarRentalProject {
             cars.Add(new Car("GOLF 6 2012", Resources.VOLKSWAGEN, Resources.golf6, 9.70));
             cars.Add(new Car("BMW M5 2020", Resources.BMW, Resources.m5, 36.45));
             cars.Add(new Car("Mercedes GT63s 2019", Resources.MERCEDES, Resources.gt63s, 42.85));
+            cars.Add(new Car("Opel Astra", Resources.opel, Resources.astra, 2.09));
         }
     }
 

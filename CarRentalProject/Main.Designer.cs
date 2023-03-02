@@ -44,20 +44,25 @@ namespace CarRentalProject {
             this.firstNameTextBox = new ReaLTaiizor.Controls.HopeTextBox();
             this.tabControl = new ReaLTaiizor.Controls.MaterialTabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.rentBtn = new ReaLTaiizor.Controls.ParrotButton();
+            this.finalizeOrderLabel = new System.Windows.Forms.Label();
             this.endDateLabel = new System.Windows.Forms.Label();
             this.endDatePicker = new ReaLTaiizor.Controls.PoisonDateTime();
             this.startDateLabel = new System.Windows.Forms.Label();
             this.startDatePicker = new ReaLTaiizor.Controls.PoisonDateTime();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.smsLabel = new System.Windows.Forms.Label();
+            this.thankYouLabel = new System.Windows.Forms.Label();
             this.personalInfoBtn = new ReaLTaiizor.Controls.ParrotButton();
             this.carSelectionBtn = new ReaLTaiizor.Controls.ParrotButton();
             this.finalizeBtn = new ReaLTaiizor.Controls.ParrotButton();
             this.exitBtn = new ReaLTaiizor.Controls.ParrotButton();
-            this.finalizeOrderLabel = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carPreviewBox)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // carRentalLabel
@@ -82,7 +87,7 @@ namespace CarRentalProject {
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(850, 381);
+            this.tabPage2.Size = new System.Drawing.Size(850, 406);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
@@ -108,7 +113,7 @@ namespace CarRentalProject {
             this.carSelectLabel.AutoSize = true;
             this.carSelectLabel.Font = new System.Drawing.Font("Inter Medium", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.carSelectLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(49)))), ((int)(((byte)(117)))));
-            this.carSelectLabel.Location = new System.Drawing.Point(319, 307);
+            this.carSelectLabel.Location = new System.Drawing.Point(319, 311);
             this.carSelectLabel.Name = "carSelectLabel";
             this.carSelectLabel.Size = new System.Drawing.Size(239, 26);
             this.carSelectLabel.TabIndex = 8;
@@ -117,7 +122,7 @@ namespace CarRentalProject {
             // 
             // carPreviewBox
             // 
-            this.carPreviewBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(49)))), ((int)(((byte)(117)))));
+            this.carPreviewBox.BackColor = System.Drawing.Color.Transparent;
             this.carPreviewBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.carPreviewBox.Location = new System.Drawing.Point(217, 59);
             this.carPreviewBox.Name = "carPreviewBox";
@@ -133,7 +138,7 @@ namespace CarRentalProject {
             // 
             this.iconComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.iconComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.iconComboBox1.DropDownHeight = 150;
+            this.iconComboBox1.DropDownHeight = 190;
             this.iconComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.iconComboBox1.DropDownWidth = 160;
             this.iconComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -142,7 +147,7 @@ namespace CarRentalProject {
             this.iconComboBox1.IconList = this.imageList;
             this.iconComboBox1.IntegralHeight = false;
             this.iconComboBox1.ItemHeight = 30;
-            this.iconComboBox1.Location = new System.Drawing.Point(312, 336);
+            this.iconComboBox1.Location = new System.Drawing.Point(312, 340);
             this.iconComboBox1.Name = "iconComboBox1";
             this.iconComboBox1.Size = new System.Drawing.Size(253, 36);
             this.iconComboBox1.TabIndex = 0;
@@ -170,7 +175,7 @@ namespace CarRentalProject {
             this.tabPage1.MinimumSize = new System.Drawing.Size(261, 61);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(850, 381);
+            this.tabPage1.Size = new System.Drawing.Size(850, 406);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -329,18 +334,20 @@ namespace CarRentalProject {
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
             this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Controls.Add(this.tabPage4);
             this.tabControl.Depth = 0;
             this.tabControl.Location = new System.Drawing.Point(52, 66);
             this.tabControl.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(858, 409);
+            this.tabControl.Size = new System.Drawing.Size(858, 434);
             this.tabControl.TabIndex = 0;
             // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.tabPage3.Controls.Add(this.rentBtn);
             this.tabPage3.Controls.Add(this.finalizeOrderLabel);
             this.tabPage3.Controls.Add(this.endDateLabel);
             this.tabPage3.Controls.Add(this.endDatePicker);
@@ -349,9 +356,48 @@ namespace CarRentalProject {
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(850, 381);
+            this.tabPage3.Size = new System.Drawing.Size(850, 406);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
+            // 
+            // rentBtn
+            // 
+            this.rentBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(88)))), ((int)(((byte)(136)))));
+            this.rentBtn.ButtonImage = global::CarRentalProject.Properties.Resources.check;
+            this.rentBtn.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            this.rentBtn.ButtonText = "Rent";
+            this.rentBtn.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(49)))), ((int)(((byte)(117)))));
+            this.rentBtn.ClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.rentBtn.CornerRadius = 5;
+            this.rentBtn.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rentBtn.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.rentBtn.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(88)))), ((int)(((byte)(136)))));
+            this.rentBtn.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.rentBtn.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            this.rentBtn.Location = new System.Drawing.Point(390, 351);
+            this.rentBtn.Name = "rentBtn";
+            this.rentBtn.Padding = new System.Windows.Forms.Padding(50);
+            this.rentBtn.Size = new System.Drawing.Size(101, 29);
+            this.rentBtn.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.rentBtn.TabIndex = 7;
+            this.rentBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.rentBtn.TextRenderingType = System.Drawing.Text.TextRenderingHint.AntiAlias;
+            this.rentBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.rentBtn.Click += new System.EventHandler(this.rentBtn_Click);
+            // 
+            // finalizeOrderLabel
+            // 
+            this.finalizeOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.finalizeOrderLabel.AutoSize = true;
+            this.finalizeOrderLabel.Font = new System.Drawing.Font("Inter Medium", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.finalizeOrderLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(88)))), ((int)(((byte)(136)))));
+            this.finalizeOrderLabel.Location = new System.Drawing.Point(360, 27);
+            this.finalizeOrderLabel.Name = "finalizeOrderLabel";
+            this.finalizeOrderLabel.Size = new System.Drawing.Size(0, 26);
+            this.finalizeOrderLabel.TabIndex = 12;
+            this.finalizeOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // endDateLabel
             // 
@@ -361,7 +407,7 @@ namespace CarRentalProject {
             this.endDateLabel.AutoSize = true;
             this.endDateLabel.Font = new System.Drawing.Font("Inter Medium", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.endDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(49)))), ((int)(((byte)(117)))));
-            this.endDateLabel.Location = new System.Drawing.Point(369, 305);
+            this.endDateLabel.Location = new System.Drawing.Point(386, 264);
             this.endDateLabel.Name = "endDateLabel";
             this.endDateLabel.Size = new System.Drawing.Size(116, 26);
             this.endDateLabel.TabIndex = 11;
@@ -373,7 +419,7 @@ namespace CarRentalProject {
             this.endDatePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
             this.endDatePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(88)))), ((int)(((byte)(136)))));
             this.endDatePicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.endDatePicker.Location = new System.Drawing.Point(329, 334);
+            this.endDatePicker.Location = new System.Drawing.Point(346, 293);
             this.endDatePicker.MinimumSize = new System.Drawing.Size(0, 29);
             this.endDatePicker.Name = "endDatePicker";
             this.endDatePicker.Size = new System.Drawing.Size(200, 29);
@@ -388,7 +434,7 @@ namespace CarRentalProject {
             this.startDateLabel.AutoSize = true;
             this.startDateLabel.Font = new System.Drawing.Font("Inter Medium", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.startDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(49)))), ((int)(((byte)(117)))));
-            this.startDateLabel.Location = new System.Drawing.Point(360, 232);
+            this.startDateLabel.Location = new System.Drawing.Point(377, 191);
             this.startDateLabel.Name = "startDateLabel";
             this.startDateLabel.Size = new System.Drawing.Size(130, 26);
             this.startDateLabel.TabIndex = 9;
@@ -400,12 +446,48 @@ namespace CarRentalProject {
             this.startDatePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
             this.startDatePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(88)))), ((int)(((byte)(136)))));
             this.startDatePicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.startDatePicker.Location = new System.Drawing.Point(329, 261);
+            this.startDatePicker.Location = new System.Drawing.Point(346, 220);
             this.startDatePicker.MinimumSize = new System.Drawing.Size(0, 29);
             this.startDatePicker.Name = "startDatePicker";
             this.startDatePicker.Size = new System.Drawing.Size(200, 29);
             this.startDatePicker.TabIndex = 0;
             this.startDatePicker.ValueChanged += new System.EventHandler(this.startDatePicker_ValueChanged);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.tabPage4.Controls.Add(this.smsLabel);
+            this.tabPage4.Controls.Add(this.thankYouLabel);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(850, 406);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            // 
+            // smsLabel
+            // 
+            this.smsLabel.AutoSize = true;
+            this.smsLabel.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.smsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(88)))), ((int)(((byte)(136)))));
+            this.smsLabel.Location = new System.Drawing.Point(123, 239);
+            this.smsLabel.Name = "smsLabel";
+            this.smsLabel.Size = new System.Drawing.Size(602, 29);
+            this.smsLabel.TabIndex = 8;
+            this.smsLabel.Text = "You will receive a sms with more details very soon !";
+            this.smsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // thankYouLabel
+            // 
+            this.thankYouLabel.AutoSize = true;
+            this.thankYouLabel.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.thankYouLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(88)))), ((int)(((byte)(136)))));
+            this.thankYouLabel.Location = new System.Drawing.Point(73, 122);
+            this.thankYouLabel.Name = "thankYouLabel";
+            this.thankYouLabel.Size = new System.Drawing.Size(718, 39);
+            this.thankYouLabel.TabIndex = 7;
+            this.thankYouLabel.Text = "Thank you for using our Car Rental Services !";
+            this.thankYouLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // personalInfoBtn
             // 
@@ -509,20 +591,6 @@ namespace CarRentalProject {
             this.exitBtn.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // finalizeOrderLabel
-            // 
-            this.finalizeOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.finalizeOrderLabel.AutoSize = true;
-            this.finalizeOrderLabel.Font = new System.Drawing.Font("Inter Medium", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.finalizeOrderLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(88)))), ((int)(((byte)(136)))));
-            this.finalizeOrderLabel.Location = new System.Drawing.Point(360, 27);
-            this.finalizeOrderLabel.Name = "finalizeOrderLabel";
-            this.finalizeOrderLabel.Size = new System.Drawing.Size(0, 26);
-            this.finalizeOrderLabel.TabIndex = 12;
-            this.finalizeOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -554,6 +622,8 @@ namespace CarRentalProject {
             this.tabControl.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,5 +658,9 @@ namespace CarRentalProject {
         private ReaLTaiizor.Controls.PoisonDateTime endDatePicker;
         private Label startDateLabel;
         private Label finalizeOrderLabel;
+        private ReaLTaiizor.Controls.ParrotButton rentBtn;
+        private TabPage tabPage4;
+        private Label thankYouLabel;
+        private Label smsLabel;
     }
 }
