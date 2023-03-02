@@ -130,4 +130,25 @@
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BMW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bmw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c220" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c220.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="golf6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\golf6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gt63s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gt63s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\m5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MERCEDES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mercedes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VOLKSWAGEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VOLKSWAGEN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
