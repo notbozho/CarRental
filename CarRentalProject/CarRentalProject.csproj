@@ -10,8 +10,73 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\bg-800x450.jpg" />
+    <None Remove="Resources\bmw.png" />
+    <None Remove="Resources\c220.png" />
+    <None Remove="Resources\car.png" />
+    <None Remove="Resources\check.png" />
+    <None Remove="Resources\exit.png" />
+    <None Remove="Resources\flag.png" />
+    <None Remove="Resources\golf6.png" />
+    <None Remove="Resources\gt63s.png" />
+    <None Remove="Resources\m5.png" />
+    <None Remove="Resources\mercedes.png" />
+    <None Remove="Resources\opel.png" />
+    <None Remove="Resources\user.png" />
+    <None Remove="Resources\VOLKSWAGEN.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentTransitions" Version="2.0.1" />
     <PackageReference Include="ReaLTaiizor" Version="3.7.9.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\bmw.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\c220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\check.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\exit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\bg-800x450.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\flag.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\golf6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\gt63s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\m5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\mercedes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\opel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\VOLKSWAGEN.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
