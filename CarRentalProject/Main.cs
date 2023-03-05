@@ -8,7 +8,7 @@ namespace CarRentalProject {
 
         private CarData carData = new CarData();
         private Car selectedCar = null;
-
+        private int daysRented = 0;
         public Main() {
             InitializeComponent();
         }
@@ -161,7 +161,7 @@ namespace CarRentalProject {
         private void updateFinalLabel() {
             if (selectedCar == null) return;
 
-            int daysRented = (int) (endDatePicker.Value - startDatePicker.Value).TotalDays + 1;
+            daysRented = (int) (endDatePicker.Value - startDatePicker.Value).TotalDays + 1;
 
             if (daysRented < 0) {
                 endDatePicker.Value = startDatePicker.Value;
@@ -183,11 +183,21 @@ namespace CarRentalProject {
             thankYouLabel.Location = new Point((Width / 2) - thankYouLabel.Width / 2 - 40, thankYouLabel.Location.Y);
 
             smsLabel.Location = new Point((Width / 2) - smsLabel.Width / 2 - 40, smsLabel.Location.Y);
+            savedToDesktopLabel.Location = new Point((Width / 2) - savedToDesktopLabel.Width / 2 - 40, savedToDesktopLabel.Location.Y);
 
             personalInfoBtn.Hide();
             carSelectionBtn.Hide();
             finalizeBtn.Hide();
 
+            String orderData = $"{selectedCar.Model}\n" +
+                $"Cost: {selectedCar.RatePerDay} BGN/day\n" +
+                $"Rented for: {daysRented} Days\n\n" +
+                $"Rented by:\n {firstNameTextBox.Text} {lastNameTextBox.Text}\n\n" +
+                $"------\n" +
+                $"Total:\n" +
+                $"{(selectedCar.RatePerDay * (daysRented)).ToString("0.00")} BGN";
+
+            Helper.printReceipt(orderData);
         }
     }
 }

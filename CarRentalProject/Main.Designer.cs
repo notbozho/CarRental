@@ -52,6 +52,7 @@ namespace CarRentalProject {
             this.startDateLabel = new System.Windows.Forms.Label();
             this.startDatePicker = new ReaLTaiizor.Controls.PoisonDateTime();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.savedToDesktopLabel = new System.Windows.Forms.Label();
             this.smsLabel = new System.Windows.Forms.Label();
             this.thankYouLabel = new System.Windows.Forms.Label();
             this.personalInfoBtn = new ReaLTaiizor.Controls.ParrotButton();
@@ -457,6 +458,7 @@ namespace CarRentalProject {
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.tabPage4.Controls.Add(this.savedToDesktopLabel);
             this.tabPage4.Controls.Add(this.smsLabel);
             this.tabPage4.Controls.Add(this.thankYouLabel);
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
@@ -465,6 +467,18 @@ namespace CarRentalProject {
             this.tabPage4.Size = new System.Drawing.Size(850, 406);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
+            // 
+            // savedToDesktopLabel
+            // 
+            this.savedToDesktopLabel.AutoSize = true;
+            this.savedToDesktopLabel.Font = new System.Drawing.Font("Inter", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.savedToDesktopLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(49)))), ((int)(((byte)(117)))));
+            this.savedToDesktopLabel.Location = new System.Drawing.Point(123, 282);
+            this.savedToDesktopLabel.Name = "savedToDesktopLabel";
+            this.savedToDesktopLabel.Size = new System.Drawing.Size(291, 23);
+            this.savedToDesktopLabel.TabIndex = 9;
+            this.savedToDesktopLabel.Text = "Order receipt saved to desktop";
+            this.savedToDesktopLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // smsLabel
             // 
@@ -664,5 +678,6 @@ namespace CarRentalProject {
         private TabPage tabPage4;
         private Label thankYouLabel;
         private Label smsLabel;
+        private Label savedToDesktopLabel;
     }
 }

@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <PackageReference Include="FluentTransitions" Version="2.0.1" />
+    <PackageReference Include="FontsInstaller" Version="1.3.0" />
     <PackageReference Include="ReaLTaiizor" Version="3.7.9.2" />
   </ItemGroup>
 
